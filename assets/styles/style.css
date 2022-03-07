@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,400&family=Quicksand:wght@500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+#content {
+  width: 100%;
+}
+
+.article {
+  height: 100vh;
+  position: relative;
+}
+
+article.odd {
+  background-color: #0a1a7a;
+  opacity: 90%;
+}
+
+.content-profile {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content-profile > h1 {
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.content-profile > h2 {
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 34px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.info {
+  display: flex;
+  background-color: #fff;
+  width: fit-content;
+  margin-top: 80px;
+  padding: 10px;
+}
+
+.info > .box {
+  padding: 10px;
+  color: #0a1a7a !important;
+  position: relative;
+  cursor: pointer;
+}
+
+.info > .box > .box-title {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.info > .box::after {
+  font-size: 20px;
+  font-weight: 400;
+
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #0a1a7a;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+  cursor: pointer;
+}
+
+.info > .box:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+  cursor: pointer;
+}
+
+article.even {
+  background-color: #fff;
+  padding: 30px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.wisatapopular-title {
+  text-align: center;
+  cursor: pointer;
+  color: #3b71fe !important;
+  font-size: 40px;
+  font-weight: bold;
+  margin: auto;
+}
+
+.content-wisatapopular-wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.content-wisatapopular-card {
+  cursor: pointer;
+  width: 20%;
+  height: 400px;
+  background: rgb(255, 255, 255);
+  border-radius: 5px;
+  margin: 10px;
+  border: 1px solid rgba(0, 0, 255, 0.2);
+  transition: all 0.2s;
+  box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
+  padding: 10px;
+
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.38);
+  background-blend-mode: darken;
+
+  color: #fff;
+}
+
+.img-gn-gede {
+  background-image: url('../image/gunung_gede.jpg');
+}
+.img-gn-merbabu {
+  background-image: url('../image/gunung_merbabu.jpg');
+}
+.img-gn-semeru {
+  background-image: url('../image/gunung_semeru.jpg');
+}
+.img-gn-rinjani {
+  background-image: url('../image/gunung_rinjani.jpg');
+}
+
+.content-wisatapopular-card:hover {
+  box-shadow: -12px 12px 2px -1px rgba(0, 0, 255, 0.2);
+}
+
+.content-wisatapopular-card-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.content-wisatapopular-card-subtitle {
+  font-size: 18px;
+}
+
+/* article.testimonial {
+  padding: 30px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+} */
+
+.testimonial-title {
+  color: #fff !important;
+  padding-top: 150px;
+}
+
+.carousel {
+  /* position: relative; */
+  max-height: 100vh;
+  /* width: 750px; */
+}
+
+.slides {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.slide {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  font-size: 3em;
+  color: white;
+  /* line-height: 400px; */
+  text-align: center;
+  opacity: 0;
+  transition: opacity 1000ms;
+}
+
+.slide > q {
+  font: 2rem/1.4 'Quicksand', serif;
+}
+.slide > p {
+  font: 1.8rem/1.4 'Quicksand', serif;
+}
+
+.slide:nth-child(1) {
+  /* background-color: red; */
+  opacity: 1;
+}
+
+.slide:nth-child(2) {
+  /* background-color: green; */
+}
+
+.slide:nth-child(3) {
+  /* background-color: blue; */
+}
+
+.slide[data-state='active'] {
+  display: block;
+}
+
+.indicators {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.indicator {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1000px) {
+  #content,
+  aside {
+    width: 100%;
+    padding: 0;
+  }
+}

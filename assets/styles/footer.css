@@ -1,0 +1,80 @@
+.footer-card-wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  height: 70%;
+}
+
+/* From cssbuttons.io by @alexmaracinaru */
+.footer-card {
+  width: 190px;
+  height: 254px;
+  background: #3b71fe;
+  border-radius: 15px;
+  box-shadow: 1px 5px 60px 0px #100a886b;
+}
+
+.footer-card .footer-card-border-top {
+  width: 60%;
+  height: 3%;
+  background: #2d23fa;
+  opacity: 50%;
+  margin: auto;
+  border-radius: 0px 0px 15px 15px;
+}
+
+.footer-card span {
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  display: block;
+  padding-top: 10px;
+  font-size: 16px;
+}
+
+.footer-card .job {
+  font-weight: 400;
+  color: white;
+  display: block;
+  text-align: center;
+  padding-top: 3px;
+  font-size: 12px;
+}
+
+.footer-card .img-wrapper {
+  display: flex;
+}
+
+.footer-card .img {
+  width: 70px;
+  height: 80px;
+  background: #2d23fa;
+  border-radius: 15px;
+  margin: auto;
+  margin-top: 25px;
+}
+
+.footer-card button {
+  padding: 8px 25px;
+  display: block;
+  margin: auto;
+  border-radius: 8px;
+  border: none;
+  margin-top: 30px;
+  background: #2d23fa;
+  opacity: 50%;
+  color: white;
+  font-weight: 600;
+}
+
+.footer-card button:hover {
+  background: #2117d6;
+}
+
+footer {
+  padding: 20px;
+  color: white;
+  background-color: #00a2c6;
+  text-align: center;
+  font-weight: bold;
+}
